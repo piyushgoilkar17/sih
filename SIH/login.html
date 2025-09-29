@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+ 
+    body, html {
+      height: 100%;
+    }
+ 
+    body {
+      background: url('assets/img1.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+ 
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+ 
+    .login-container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      width: 100%;
+      max-width: 350px;
+      padding: 20px;
+    }
+ 
+    .login-container h1 {
+      color: #fff; /* Login text is white */
+      margin-bottom: 20px;
+    }
+ 
+    .input-box {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 25px;
+      outline: none;
+      background: rgba(252, 191, 73, 0.2);
+      color: #fff;
+    }
+ 
+    .input-box::placeholder {
+      color: #fcbf49;
+    }
+ 
+    .btn {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background: #fcbf49;
+      border: none;
+      border-radius: 25px;
+      color: #000;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-family: Calibri, sans-serif;
+    }
+ 
+    .btn:hover {
+      background: #e0a83d;
+    }
+ 
+    .options {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #fff; /* Keep Logged in text is white now */
+    }
+ 
+    .options a {
+      color: #fff; /* Forgot Password is white */
+      text-decoration: none;
+    }
+ 
+    .options a:hover {
+      text-decoration: underline;
+    }
+ 
+    .footer-links {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      color: #fcbf49;
+    }
+ 
+    .footer-links a {
+      color: #fcbf49;
+      margin: 0 8px;
+      text-decoration: none;
+    }
+ 
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+ 
+    @media (max-width: 480px) {
+      .login-container {
+        padding: 15px;
+      }
+      .btn, .input-box {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form>
+      <input type="text" class="input-box" placeholder="Username" required />
+      <input type="password" class="input-box" placeholder="Password" required />
+      <button type="submit" class="btn">GET STARTED</button>
+    </form>
+    <div class="options">
+      <label><input type="checkbox"> Keep Logged in</label>
+      <a href="#">Forgot Password?</a>
+    </div>
+    <div class="options" style="justify-content: center; margin-top: 10px;">
+      <a href="#">Create Account</a> | <a href="#">Need Help?</a>
+    </div>
+  </div>
+ 
+  <div class="footer-links">
+    <a href="#">About Us</a> |
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Terms of Use</a>
+    
+  </div>
+</body>
+</html>
+ 
